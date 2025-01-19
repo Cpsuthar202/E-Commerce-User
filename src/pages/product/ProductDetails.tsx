@@ -1,6 +1,6 @@
 import { Grid, Typography, Button, IconButton, Box, Stack, Chip, Container, Divider, Rating, LinearProgress } from "@mui/material";
 import { Add, Remove, Favorite, FavoriteBorder, Share } from "@mui/icons-material";
-import { Image, ZoomImage } from "@components/image/index";
+import { Image } from "@components/image/index";
 import { DisplayRatings } from "@components/ratings/Ratings";
 import { WebShare } from "@components/Container/index";
 import { mColor } from "@color";
@@ -25,8 +25,8 @@ const ProductDetails = () => {
         <Grid item xs={12} md={6} sx={{ display: "grid", placeItems: "center" }}>
           {/* Main Product Image */}
           <Box sx={{ width: isSmallScreen ? "100%" : "70%", display: "grid", placeItems: "center", position: "relative" }}>
-            <ZoomImage src={selectImage} />
-            {/* <Image src={selectImage} alt="image" style={{ width: "100%", borderRadius: 10 }} /> */}
+            {/* <ZoomImage src={selectImage} /> */}
+            <Image src={selectImage} alt="image" style={{ width: "100%", borderRadius: 10 }} />
             {/* Sold Out Labels */}
             {product?.stock === 0 && <Chip label="Sold Out" color="error" size="small" sx={{ borderRadius: "5px ", position: "absolute", top: 0, right: 0 }} />}
 
